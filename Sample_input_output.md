@@ -1,8 +1,4 @@
-# 🎯 Gambling Unifier - Submission Guide
-
-## 📋 What You Need for Submission
-
-Your project submission is now complete with the following components:
+# 🎯 Gambling Unifier - sample input and output guide and documentation
 
 ### **Core Implementation Files**
 - `src/gambling_unifier/` - Main source code
