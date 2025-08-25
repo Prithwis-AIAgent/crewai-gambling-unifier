@@ -52,6 +52,20 @@ unified_products.csv
 report.md
 rag_chat_output.md
 
+# CrewAI submission output files
+output/
+raw_products.json
+unified_products.csv
+final_products.csv
+rag_analysis.md
+execution_summary.json
+
+# CrewAI submission logs
+gambling_unifier.log
+
+# Sample outputs (for demonstrations)
+sample_outputs/
+
 # Logs
 logs/
 *.log
