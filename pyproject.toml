@@ -1,0 +1,30 @@
+[project]
+name = "gambling_unifier"
+version = "0.1.0"
+description = "gambling_unifier using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "crewai[tools]>=0.150.0,<1.0.0",
+    "beautifulsoup4>=4.12",
+    "requests>=2.31",
+    "rapidfuzz>=3.6",
+    "litellm>=1.43",
+    "browser-use>=0.1.24",
+    "pandas>=2.0.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.scripts]
+gambling_unifier = "gambling_unifier.main:run"
+run_crew = "gambling_unifier.main:run"
+train = "gambling_unifier.main:train"
+replay = "gambling_unifier.main:replay"
+test = "gambling_unifier.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

@@ -1,0 +1,37 @@
+research_task:
+  description: >
+    Use the scraping tools to retrieve product lists from at least three sites:
+    - Polymarket API or markets page
+    - Kalshi catalog or markets page
+    - prediction-market.com (or other from the alternatives list)
+    Return a single JSON array combining all products with fields: site, product_id, name, price, url.
+  expected_output: >
+    A JSON array of product records with fields: site, product_id, name, price (float|nullable), url.
+  agent: researcher
+
+reporting_task:
+  description: >
+    Take the JSON array of products from the previous task. Use the matching tool to group same products across sites
+    and compute confidence values. Then convert the groups to CSV with columns:
+    name, site, product_id, price, confidence. Also write a brief markdown news-style summary describing notable
+    differences in pricing and interesting markets.
+  expected_output: >
+    1) CSV content for unified product board. 2) A short markdown review.
+  agent: reporting_analyst
+
+csv_task:
+  description: >
+    Receive the unified groups and convert them to CSV rows with the columns name, site, product_id, price, confidence.
+    Save to file.
+  expected_output: >
+    A CSV file content with required columns.
+  agent: csv_producer
+
+rag_chat_task:
+  description: >
+    Answer a sample question about the unified gambling products using the RAG tool. The question should be about
+    analyzing the data, finding patterns, or getting insights from the unified product board.
+  expected_output: >
+    A detailed answer to the question based on the available data, demonstrating the RAG system's ability to
+    provide insights about the gambling products.
+  agent: rag_chat_agent
